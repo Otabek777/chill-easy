@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title></title>
+</head>
+<body>
+    <!-- modal -->
+    <div class="modal">
+        <button class="modal__close"><img src="img/modal-close.png" alt=""></button>
+        <div class="modal__wrap reg">
+            <h2>Регистрация</h2>
+            <p>Привет! Давайте знакомиться. Заполните форму ниже и станьте участников ChillEasy Club:</p>
+            <form action="">
+                <div class="wrap">
+                    <div class="main_input">
+                        <input type="text" placeholder="ФИО">
+                    </div>
+                    <div class="main_input">
+                        <input class="input_phone tel" type="text" placeholder="Номер телефона">
+                    </div>
+                    <div class="main_input">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="main_input">
+                        <input type="text" placeholder="Город">
+                    </div>
+                    <div class="main_check">
+                        <input type="radio" id="face1" name="face">
+                        <label for="face1">физ.лицо</label>
+                    </div>
+                    <div class="main_check">
+                        <input type="radio" id="face2" name="face">
+                        <label for="face2">юр.лицо</label>
+                    </div>
+                    <div class="main_input">
+                        <input type="text" placeholder="Компания">
+                    </div>
+                </div>
+                <button class="main_btn">отправить</button>
+            </form>
+        </div>
+        <div class="modal__wrap auth">
+            <h2>Войти в личный кабинет</h2>
+            <div class="auth__tab">
+                <button class="btn active" id="authBtn1">по телефону</button>
+                <button class="btn" id="authBtn2">по email</button>
+            </div>
+            <div class="auth__wrap active" id="auth1">
+                <form action="">
+                    <div class="main_input">
+                        <input class="input_phone tel" type="text" placeholder="+7 ( _ _ _ ) _ _ _  _ _  _ _">
+                    </div>
+                    <div class="main_input">
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                    <button class="main_btn">войти</button>
+                </form>
+            </div>
+            <div class="auth__wrap" id="auth2">
+                <form action="">
+                    <div class="main_input">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="main_input">
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                    <button class="main_btn">войти</button>
+                </form>
+            </div>
+            <div class="open-reg-wrap">
+                <button class="open-reg">Зарегистрироваться</button>
+            </div>
+            
+        </div>
+        <div class="modal__wrap filter">
+            <h2>Фильтр</h2>
+            <div class="filter__wrap filter__product">
+                <h6>Наличие товара</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="nameproduct">
+                    <label for="nameproduct">показывать товары в наличии на сайте</label>
+                </div>
+            </div>
+            <div class="filter__wrap filter__color">
+                <h6>Цвет</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="color1">
+                    <label for="color1">
+                        <span><img src="img/colors/1.png" alt=""></span>
+                        бежевый
+                    </label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color2">
+                    <label for="color2">
+                        <span><img src="img/colors/2.png" alt=""></span>
+                        красный</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color3">
+                    <label for="color3">
+                        <span><img src="img/colors/3.png" alt=""></span>
+                        бордовый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color4">
+                    <label for="color4">
+                        <span><img src="img/colors/4.png" alt=""></span>
+                        зеленый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color5">
+                    <label for="color5">
+                        <span><img src="img/colors/5.png" alt=""></span>
+                        белый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color6">
+                    <label for="color6">
+                        <span><img src="img/colors/6.png" alt=""></span>
+                        синый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color7">
+                    <label for="color7">
+                        <span><img src="img/colors/7.png" alt=""></span>
+                        голубой</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color8">
+                    <label for="color8">
+                        <span><img src="img/colors/8.png" alt=""></span>
+                        черный</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color9">
+                    <label for="color9">
+                        <span><img src="img/colors/9.png" alt=""></span>
+                        желтый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color10">
+                    <label for="color10">
+                        <span><img src="img/colors/10.png" alt=""></span>
+                        оранжевый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color11">
+                    <label for="color11">
+                        <span><img src="img/colors/11.png" alt=""></span>
+                        коричневый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color12">
+                    <label for="color12">
+                        <span><img src="img/colors/12.png" alt=""></span>
+                        серый</label>
+                </div>
+            </div>
+            <div class="filter__wrap filter__size">
+                <h6>Размер</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="size1">
+                    <label for="size1">104</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size2">
+                    <label for="size2">140</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size3">
+                    <label for="size3">110</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size4">
+                    <label for="size4">140-146</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size5">
+                    <label for="size5">116</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size6">
+                    <label for="size6">146</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size7">
+                    <label for="size7">122</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size8">
+                    <label for="size8">152</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size9">
+                    <label for="size9">128</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size10">
+                    <label for="size10">158</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size11">
+                    <label for="size11">134</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size12">
+                    <label for="size12">164</label>
+                </div>
+            </div>
+            <button class="main_btn2">Показать</button>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__box">
+                        <nav class="header__top-nav">
+                            <ul>
+                                <li><a href="about-us.html">О нас</a></li>
+                                <li><a href="payments.html">Оплата и доставка</a></li>
+                                <li><a href="сooperation.html">Сотрудничество</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <a href="tel:+89161381068" class="header__call">+8 916 138 10 68</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <div class="header__items">
+                        <button class="header__burgir">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <button class="item open-search">
+                            <img src="img/search.png" alt="search">
+                        </button>
+                        <div class="search_block">
+                            <button class="search_close">
+                                <img src="img/modal-close.png" alt="">
+                            </button>
+                            <input type="text" placeholder="Поиск">
+                            <button class="btn">
+                                <img src="img/search.png" alt="search">
+                            </button>
+                        </div>
+                        <a href="dashboard-like.html" class="item item-like">
+                            <!-- <img src="img/like.png" alt="search"> -->
+                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1" xml:space="preserve"><desc/><path d="M28.343,17.48L16,29  L3.657,17.48C1.962,15.898,1,13.684,1,11.365v0C1,6.745,4.745,3,9.365,3h0.17c2.219,0,4.346,0.881,5.915,2.45L16,6l0.55-0.55  C18.119,3.881,20.246,3,22.465,3h0.17C27.255,3,31,6.745,31,11.365v0C31,13.684,30.038,15.898,28.343,17.48z" fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/></svg>
+                        </a>
+                        <button class="item open-auth">
+                            <img src="img/user.png" alt="search">
+                        </button>
+                        <a href="cart.html" class="item">
+                            <img src="img/shop.png" alt="search">
+                        </a>     
+                    </div>
+                    <nav class="header__navbar">
+                        <ul>
+                            <li><a href="#">Девочки</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Мальчики</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Женское</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Мужское</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Малышам</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Коллекции</a></li>
+                            <li><a href="magazine.html">Журнал</a></li>
+                            <li><a href="sale.html">Акции</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="policy">
+            <div class="container">
+                <div class="crumbs">
+                    <a href="#" class="link_back">Назад</a>
+                    <button class="open-aside"><span></span>Меню</button>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><p>Политика конфеденциальности CHILLEASY</p></li>
+                    </ul>
+                </div>
+                <h4>ПОЛИТИКА КОНФЕДЕНЦИАЛЬНОСТИ CHILLEASY</h4>
+                <div class="policy__wrap">
+                    <h6>ОБЩИЕ ПОЛОЖЕНИЯ И ИНФОРМАЦИЯ ОБ ОПЕРАТОРЕ</h6>
+                    <p>
+                        Политика в отношении обработки персональных данных в ООО «ДС ГРУПП» (ИНН 6679183549) - сайт интернет-магазина https://chilleasy.ru/ (далее - Оператор, Компания).
+                        Политика в отношении обработки персональных данных (далее - Политика) направлена на защиту прав и свобод физических лиц, чьи персональные данные обрабатываются на сайте в Интернет-магазине https://chilleasy.ru/ (далее - Оператор, Компания). Политика разработана в соответствии с пунктом 2 части 1 статьи 18.1 Федерального закона от 27 июля 2006 г. № 152-ФЗ «О персональных данных» (далее - ФЗ «О персональных данных»). Политика содержит информацию, подлежащую раскрытию в соответствии с частью 1 статьи 14 Федерального закона «О персональных данных», и является общедоступным документом. Перед использованием веб-сайта https://chilleasy.ru/ принадлежащего, администрируемого или используемого ООО «ДС ГРУПП», пожалуйста, ознакомьтесь с условиями настоящей Политики. Пользуясь Ресурсами, Вы подтверждаете, что Вы ознакомились с условиями настоящей Политики в полном объеме до начала использования. Начало использования Вами любого из ресурсов в любой форме означает, что Вы принимаете условия настоящей Политики. Политика может быть изменена Компанией. Новая редакция Политики вступает в силу с момента ее размещения на Ресурсах.
+                        Оператор обрабатывает персональные данные клиентов с их согласия, предоставленного либо в письменной форме, либо при совершении конклюдентных действий.
+                        Оператор обрабатывает персональные данные своих клиентов не дольше, чем это требуется для целей обработки персональных данных, если иное не установлено законодательством  Российской Федерации. Оператор работает по адресу https://chilleasy.ru/. Ответственным за организацию обработки персональных данных назначен ООО «ДС ГРУПП».
+                    </p>
+                </div>
+                <div class="policy__wrap">
+                    <h6>ЦЕЛИ, КАТЕГОРИИ И ОСНОВАНИЯ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ СУБЪЕКТОВ</h6>
+                    <p>В Компании могут обрабатываться персональные данные исключительно в целях, для которых они были собраны или получены. В частности, Компания может обрабатывать персональные данные для достижения целей.</p>
+                    <p>Персональные данные могут обрабатываться Компанией также в иных целях, установленных утвержденным Перечнем персональных данных, обрабатываемых Компанией (далее — Перечень персональных данных).</p>
+                    <p>В Перечне персональных данных для каждой цели обработки в т. ч. определены:</p>
+                    <ul>
+                        <li>категории Субъектов, чьи персональные данные обрабатываются Компанией;</li>
+                        <li>перечень категорий обрабатываемых персональных данных;</li>
+                        <li>правовые основания обработки персональных данных;</li>
+                        <li>сроки обработки (хранения) персональных данных;</li>
+                        <li>порядок уничтожения персональных данных.</li>
+                    </ul>
+                    <p>Перечень персональных данных подлежит пересмотру лицом, ответственным за организацию обработки персональных данных в Компании, не реже одного раза в год, а также по мере необходимости при изменении процессов обработки персональных данных для обеспечения точности, достоверности и актуальности персональных данных, в том числе по отношению к целям обработки персональных данных.</p>
+                    <p>Перечень персональных данных подлежит пересмотру лицом, ответственным за организацию обработки персональных данных в Компании, не реже одного раза в год, а также по мере необходимости при изменении процессов обработки персональных данных для обеспечения точности, достоверности и актуальности персональных данных, в том числе по отношению к целям обработки персональных данных.
+Компания вправе в указанных целях собирать, вносить персональные данные в информационные системы, хранить и обрабатывать любыми не противоречащими законодательству способами путем как автоматизированной, так и неавтоматизированной и смешанной обработки. По достижении целей обработки или в случае утраты необходимости в достижении этих целей, если иное не предусмотрено законодательством, либо иное отдельно не согласовано сторонами, обрабатываемые персональные данные подлежат уничтожению.</p>
+                    <p>В Компании не обрабатываются биометрические данные, а также сведения, касающиеся расовой, национальной принадлежности, политических взглядов, религиозных или философских убеждений, интимной жизни Субъектов персональных данных.</p>
+                    <p>Компания не размещает персональные данные в общедоступных источниках и не распространяет персональные данные без согласия Субъекта или соответствующих требований законодательства. При предоставлении Субъектами персональных данных согласий на обработку персональных данных, разрешенных для распространения, условий и запретов не было установлено.</p>
+                    <p>Обработка персональных данных в целях, указанных выше, осуществляется Компанией на следующих законных основаниях:</p>
+                    <ul>
+                        <li>заключения и исполнения договора, стороной которого либо выгодоприобретателем или поручителем, по которому является Субъект, в частности, Условий продажи товаров и использования интернет-магазина и Правил программы лояльности (если применимо),</li>
+                        <li>с согласия Субъекта персональных данных, предоставляемого при заполнении веб-форм или в ином виде,</li>
+                        <li>для выполнения функций и обязанностей, возложенных на Компанию применимым законодательством,</li>
+                        <li>для осуществления прав и законных интересов Компании или третьих лиц либо для достижения общественно значимых целей при условии, что при этом не нарушаются права и свободы Субъекта персональных данных.</li>
+                    </ul>
+                </div>
+                <div class="policy__wrap">
+                    <h6>ПРИНЦИПЫ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h6>
+                    <p>При обработке персональных данных Субъектов Компания руководствуется Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» («Закон о персональных данных»).</p>
+                    <p>Компания обрабатывает персональные данные на основании следующих принципов:</p>
+                    <ul>
+                        <li>обработка персональных данных осуществляется на законной и справедливой основе;</li>
+                        <li>обработка персональных данных ограничивается достижением конкретных, заранее определенных и законных целей;</li>
+                        <li>не допускается обработка персональных данных, несовместимая с целями сбора персональных данных;</li>
+                        <li>не допускается объединение баз данных, содержащих персональные данные, обработка которых осуществляется в целях, несовместимых между собой;</li>
+                        <li>обработке подлежат только персональные данные, которые отвечают целям их обработки;</li>
+                        <li>содержание и объем обрабатываемых персональных данных соответствуют заявленным целям обработки. Не допускается избыточность обрабатываемых персональных данных по отношению к заявленным целям их обработки;</li>
+                        <li>при обработке персональных данных обеспечивается точность персональных данных, их достаточность, а в необходимых случаях — и актуальность по отношению к целям обработки персональных данных, принимаются необходимые меры по удалению или уточнению неполных или неточных персональных данных;</li>
+                        <li>хранение персональных данных осуществляется в форме, позволяющей определить Субъекта или иного Субъекта персональных данных, не дольше, чем того требуют цели обработки персональных данных, если срок хранения персональных данных не установлен федеральным законом, согласием на обработку, договором, стороной которого, выгодоприобретателем или поручителем, по которому является Субъект персональных данных;</li>
+                        <li>обрабатываемые персональные данные уничтожаются по достижении целей обработки или в случае утраты необходимости в достижении этих целей, если иное не предусмотрено федеральным законом;</li>
+                        <li>обработка персональных данных не используется в целях причинения имущественного и/или морального вреда Субъектам персональных данных, затруднения реализации их прав и свобод.</li>
+                    </ul>
+                </div>
+                <div class="policy__wrap">
+                    <h6>УСЛОВИЯ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h6>
+                    <p>Обработка персональных данных осуществляется Компанией в соответствии с настоящей Политикой, внутренними актами Компании, а также законодательством Российском Федерации.</p>
+                    <p>Обработка персональных данных осуществляется Компанией, а также иными третьими лицами, которые привлекаются Компанией к обработке, или которым передаются персональные данные в указанных целях в соответствии с законодательством Российской Федерации. К числу подобных третьих лиц, в частности, могут относиться</p>
+                    <ul>
+                        <li>контрагенты Компании, оказывающие услуги поддержки используемых информационных систем (CRM-систем и др.), хостинга, юридические, аудиторские, иные услуги, приобретаемые Компанией в указанных выше целях;</li>
+                        <li>контрагенты Компании, оказывающие услуги хранения, хостинга сайтов и поддержки используемых информационных систем, горячей линии и колл-центра, организации мероприятий, организации рассылки, по сбору и обработке отзывов Субъектов, проведению опросов и исследований среди Субъектов, иные услуги, приобретаемые Компанией в указанных выше целях;</li>
+                        <li>государственные/муниципальные органы власти в случаях, установленных законодательством.</li>
+                    </ul>
+                    <p>Компания имеет право привлекать третьих лиц к обработке полученных персональных данных и/или передавать им полученные данные, а также получать от них данные в указанных целях без дополнительного согласия Субъекта при условии обеспечения указанными третьими лицами конфиденциальности и безопасности персональных данных при обработке. Допускается обработка персональных данных указанными третьими лицами с использованием и без использования средств автоматизации, а также совершение ими любых действий по обработке персональных данных, не противоречащих законодательству Российской Федерации. Обработка персональных данных третьим лицом может осуществляться только на основании договора, в котором определены перечень действий (операций), которые будут осуществляться с персональными данными, и цели обработки, положения по обеспечению безопасности персональных данных, в том числе требования не раскрывать и не распространять персональные данные без согласия Субъекта, если иное не предусмотрено законодательством Российской Федерации, а также требования статьи 19 Закона о персональных данных.</p>
+                    <p>Оператор обрабатывает персональные данные автоматизированным и неавтоматизированным способами, с использованием средств вычислительной техники и без использования таких средств.</p>
+                    <p>Компания не размещает персональные данные в общедоступных источниках без письменного согласия Субъекта или иного Субъекта персональных данных.</p>
+                </div>
+                <div class="policy__wrap">
+                    <h6>МЕРЫ ПО ОБЕСПЕЧЕНИЮ БЕЗОПАСНОСТИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h6>
+                    <p>Компания обязуется принимать необходимые правовые, организационные и технические меры для защиты получаемых персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, предоставления, распространения персональных данных, иных неправомерных действий в отношении персональных данных, и соблюдать принципы и правила обработки персональных данных, предусмотренные Законом о персональных данных и иными применимыми нормативными актами.</p>
+                    <p>К мерам обеспечения безопасности ПД в Компании относятся, в том числе, следующие:</p>
+                    <ul>
+                        <li>учет обрабатываемых в Компании категорий и перечня персональных данных, категорий Субъектов, персональные данные которых обрабатываются, сроков хранения и порядка уничтожения таких персональных данных;</li>
+                        <li>учет мест хранения персональных данных и информационных систем Компании, в которых обрабатываются персональные данные;</li>
+                        <li>определение необходимого уровня защищенности персональных данных, обрабатываемых в информационных системах персональных данных Компании;</li>
+                        <li>определение угроз безопасности персональных данных при их обработке в информационных системах;</li>
+                        <li>определение и внедрение технических и организационных мер, обеспечивающих защиту персональных данных, перед введением новых процессов обработки персональных данных и новых информационных систем персональных данных;</li>
+                        <li>осуществление и документирование оценки вреда, который может быть причинен Субъектам персональных данных в случае нарушения Закона о персональных данных, соотношение указанного вреда и принимаемых Компанией мер;</li>
+                        <li>установление правил доступа к персональным данным, обрабатываемым в информационных системах, а также обеспечение регистрации и учета действий, совершаемых с персональными данными в информационных системах;</li>
+                        <li>применение прошедших в установленном порядке процедуру оценки соответствия средств защиты информации;</li>
+                        <li>обнаружение фактов несанкционированного доступа к персональным данным и других инцидентов, принятие мер по ликвидации и митигации последствий;</li>
+                        <li>восстановление персональных данных, модифицированных или уничтоженных вследствие несанкционированного доступа к ним;</li>
+                        <li>учет должностей работников Компании, доступ которых к персональным данным, обрабатываемым как с использованием, так и без использования средств автоматизации, необходим для выполнения служебных (трудовых) обязанностей;</li>
+                        <li>ознакомление работников Компании, непосредственно осуществляющих обработку персональных данных, с положениями законодательства Российской Федерации о персональных данных, в том числе требованиями к защите персональных данных, настоящей Политикой и иными локальными актами Компании по вопросам обработки и защиты персональных данных, обучение работников Компании;</li>
+                        <li>контроль и оценка эффективности применяемых мер по обеспечению безопасности персональных данных до ввода в эксплуатацию информационной системы персональных данных;</li>
+                        <li>осуществление регулярного внутреннего контроля аудита соответствия обработки и обеспечения безопасности персональных данных действующему законодательству Российской Федерации в области обработки и обеспечения безопасности персональных данных.</li>
+                    </ul>
+                    <p>В Компании назначены лица, ответственные за организацию обработки и обеспечение безопасности персональных данных.</p>
+                    <p>Во внутренних документах, обязательных для исполнения всеми работниками Компании, а также в соответствующих соглашениях с партнерами, контрагентами и прочими третьими лицами в части, их касающейся, определяются процедуры:</p>
+                    <ul>
+                        <li>предоставления доступа к информации;</li>
+                        <li>внесения изменений в персональные данные с целью обеспечения их точности, достоверности и актуальности, в том числе по отношению к целям обработки;</li>
+                        <li>уничтожения либо блокирования персональных данных в случае необходимости выполнения такой процедуры;</li>
+                        <li>обработки обращений и Субъектов персональных данных (их законных представителей) для случаев, предусмотренных Законом о персональных данных, в частности порядок подготовки информации о наличии персональных данных, относящихся к конкретному Субъекту, информации, необходимой для предоставления возможности ознакомления Субъектом (его законными представителями) с его персональными данными, а также процедуры обработки обращений об уточнении персональных данных, их блокировании или уничтожении, если они являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для установленной цели обработки;</li>
+                        <li>обработки запроса уполномоченного органа по защите прав Субъектов персональных данных;</li>
+                        <li>получения согласия Субъекта персональных данных на обработку персональных данных;</li>
+                        <li>передачи персональных данных третьим лицам;</li>
+                        <li>работы с материальными носителями персональных данных;</li>
+                        <li>необходимые для осуществления уведомления уполномоченного органа по защите прав Субъектов персональных данных в сроки, установленные Законом о персональных данных.</li>
+                    </ul>
+                    <p>При сборе персональных данных Компания обеспечивает сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), блокирование, удаление, уничтожение персональных данных граждан Российской Федерации с использованием баз данных, находящихся на территории Российской Федерации.</p>
+                </div>
+                <div class="policy__wrap">
+                    <h6>ИСПОЛЬЗОВАНИЕ COOKIE-ФАЙЛОВ И ИНЫХ СРЕДСТВ ВЕБ-АНАЛИТИКИ</h6>
+                    <p>Cookie - это небольшие файлы, которые создаются и сохраняются браузером при посещении веб-сайтов Компании. Cookie-файлы хранятся на устройстве не более 13 месяцев и позволяют отслеживать качество работы веб-сайта и характеристики его использования, а также оптимизировать маркетинговые активности в Интернете.</p>
+                    <p>Посещение и использование веб-сайтов по умолчанию предусматривает генерацию и сохранение cookie-файлов. Однако Субъект в любой момент может удалить cookie-файлы с устройства через настройки используемого браузера. Субъект также может отказаться от принятия cookie-файлов, однако при этом не гарантирована работа всех функций веб-сайтов (например, запоминание города Субъекта, аутентификация в личных кабинетах).</p>
+                    <p>На веб-сайтах и в мобильных приложениях Компании используются следующие виды средств веб-аналитики:</p>
+                    <p>Технические и функциональные cookie-файлы	Эти файлы, генерируемые движками сайтов, используются для обеспечения бесперебойной работы сайтов, а также для запоминания выбранных Субъектом настроек (в частности, контроля языка и всплывающих баннеров).
+Маркетинговые и аналитические cookie-файлы и пиксели	Для сбора и статистического анализа данных, связанных с использованием веб-сайтов, используются сервисы Яндекс.Метрика. Кроме этого, могут также использоваться различные пиксели дополнительных сервисов. Сведения, получаемые с помощью сервисов, не позволяют идентифицировать пользователей.</p>
+                </div>
+                <div class="policy__wrap">
+                    <h6>ПРАВА СУБЪЕКТОВ ПЕРСОНАЛЬНЫХ ДАННЫХ И КОНТАКТЫ ПО ВОПРОСАМ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ</h6>
+                    <p>При обработке персональных данных Субъекты вправе:</p>
+                    <ul>
+                        <li>запросить информацию, касающуюся обработки персональных данных Субъектов,</li>
+                        <li>потребовать уточнения, уничтожения или блокирования персональных данных, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели обработки,</li>
+                        <li>отозвать предоставленные Компании согласия на обработку персональных данных,</li>
+                        <li>обжаловать действия Компании в административном или судебном порядке.</li>
+                    </ul>
+                    <p>В случае возникновения любых вопросов и обращений касательно обработки персональных данных, в том числе для отзыва согласий на обработку персональных данных, Субъекты могут обратиться по адресу электронной почты info@chilleasy.ru либо направить письменное обращение по адресу: 620010, Россия, Свердловская область, г Екатеринбург, Торговая ул, д. 4, помещ. 60 
+Компания отвечает на запросы Субъектов в сроки, установленные законодательством РФ. В случае возникновения обстоятельств, которые требуют установления дополнительной информации, Компания в случаях, установленных законодательством РФ, вправе продлить срок ответа на запрос Субъекта на срок до 5 рабочих дней при условии направления Субъекту мотивированного уведомления о причинах продления срока.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__form">
+                <h2>связаться с нами</h2>
+                <p>Оставьте свои контактные данные и наш менеджер свяжется с вами:</p>
+                <form action="">
+                    <div class="form__input">
+                        <input type="text" placeholder="ФИО">
+                    </div>
+                    <div class="form__input">
+                        <input class="input_phone tel" type="text" placeholder="Телефон">
+                    </div>
+                    <button class="form__btn">Отправить</button>
+                </form>
+            </div>
+            <div class="footer__center">
+                <div class="footer__nav">
+                    <h6>Каталог</h6>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Девочки</a></li>
+                            <li><a href="#">Мальчики</a></li>
+                            <li><a href="#">Женщины</a></li>
+                            <li><a href="#">Мужчины</a></li>
+                            <li><a href="#">Малыши</a></li>
+                            <li><a href="#">Коллекции</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__nav">
+                    <h6>О нас</h6>
+                    <nav>
+                        <ul>
+                            <li><a href="about-us.html">О компании</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="magazine.html">Журнал</a></li>
+                            <li><a href="vacancies.html">Вакансии</a></li>
+                            <li><a href="сooperation.html">Сотрудничество</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="index.html" class="footer__logo">
+                    <img src="img/footer-logo.png" alt="">
+                </a>
+                <div class="footer__nav">
+                    <h6>Контакты</h6>
+                    <a href="tel:+89161381068" class="footer__phone">8-916-138-10-68</a>
+                    <a href="tomail:info@chilleasy.ru" class="footer__email">info@chilleasy.ru</a>
+                </div>
+                <div class="footer__nav">
+                    <h6>Мы в соцсетях:</h6>
+                    <div class="footer__soc">
+                        <a href="#">
+                            <img src="img/telegram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/vk.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>Используем cookies для корректной работы сайта, персонализации пользователей и других целей, предусмотренных <a href="#">политикой обработки персональных данных.</a></p>
+                <p class="copy">© Chilleasy. 2025. Все права защищены. <a href="#">Оферта.</a></p>
+            </div>
+        </div>
+    </footer>  
+    <script src="js/jquery.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

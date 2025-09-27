@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title></title>
+</head>
+<body>
+    <!-- modal -->
+    <div class="modal">
+        <button class="modal__close"><img src="img/modal-close.png" alt=""></button>
+        <div class="modal__wrap reg">
+            <h2>Регистрация</h2>
+            <p>Привет! Давайте знакомиться. Заполните форму ниже и станьте участников ChillEasy Club:</p>
+            <form action="">
+                <div class="wrap">
+                    <div class="main_input">
+                        <input type="text" placeholder="ФИО">
+                    </div>
+                    <div class="main_input">
+                        <input class="input_phone tel" type="text" placeholder="Номер телефона">
+                    </div>
+                    <div class="main_input">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="main_input">
+                        <input type="text" placeholder="Город">
+                    </div>
+                    <div class="main_check">
+                        <input type="radio" id="face1" name="face">
+                        <label for="face1">физ.лицо</label>
+                    </div>
+                    <div class="main_check">
+                        <input type="radio" id="face2" name="face">
+                        <label for="face2">юр.лицо</label>
+                    </div>
+                    <div class="main_input">
+                        <input type="text" placeholder="Компания">
+                    </div>
+                </div>
+                <button class="main_btn">отправить</button>
+            </form>
+        </div>
+        <div class="modal__wrap auth">
+            <h2>Войти в личный кабинет</h2>
+            <div class="auth__tab">
+                <button class="btn active" id="authBtn1">по телефону</button>
+                <button class="btn" id="authBtn2">по email</button>
+            </div>
+            <div class="auth__wrap active" id="auth1">
+                <form action="">
+                    <div class="main_input">
+                        <input class="input_phone tel" type="text" placeholder="+7 ( _ _ _ ) _ _ _  _ _  _ _">
+                    </div>
+                    <div class="main_input">
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                    <button class="main_btn">войти</button>
+                </form>
+            </div>
+            <div class="auth__wrap" id="auth2">
+                <form action="">
+                    <div class="main_input">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="main_input">
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                    <button class="main_btn">войти</button>
+                </form>
+            </div>
+            <div class="open-reg-wrap">
+                <button class="open-reg">Зарегистрироваться</button>
+            </div>
+            
+        </div>
+        <div class="modal__wrap filter">
+            <h2>Фильтр</h2>
+            <div class="filter__wrap filter__product">
+                <h6>Наличие товара</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="nameproduct">
+                    <label for="nameproduct">показывать товары в наличии на сайте</label>
+                </div>
+            </div>
+            <div class="filter__wrap filter__color">
+                <h6>Цвет</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="color1">
+                    <label for="color1">
+                        <span><img src="img/colors/1.png" alt=""></span>
+                        бежевый
+                    </label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color2">
+                    <label for="color2">
+                        <span><img src="img/colors/2.png" alt=""></span>
+                        красный</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color3">
+                    <label for="color3">
+                        <span><img src="img/colors/3.png" alt=""></span>
+                        бордовый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color4">
+                    <label for="color4">
+                        <span><img src="img/colors/4.png" alt=""></span>
+                        зеленый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color5">
+                    <label for="color5">
+                        <span><img src="img/colors/5.png" alt=""></span>
+                        белый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color6">
+                    <label for="color6">
+                        <span><img src="img/colors/6.png" alt=""></span>
+                        синый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color7">
+                    <label for="color7">
+                        <span><img src="img/colors/7.png" alt=""></span>
+                        голубой</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color8">
+                    <label for="color8">
+                        <span><img src="img/colors/8.png" alt=""></span>
+                        черный</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color9">
+                    <label for="color9">
+                        <span><img src="img/colors/9.png" alt=""></span>
+                        желтый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color10">
+                    <label for="color10">
+                        <span><img src="img/colors/10.png" alt=""></span>
+                        оранжевый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color11">
+                    <label for="color11">
+                        <span><img src="img/colors/11.png" alt=""></span>
+                        коричневый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color12">
+                    <label for="color12">
+                        <span><img src="img/colors/12.png" alt=""></span>
+                        серый</label>
+                </div>
+            </div>
+            <div class="filter__wrap filter__size">
+                <h6>Размер</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="size1">
+                    <label for="size1">104</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size2">
+                    <label for="size2">140</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size3">
+                    <label for="size3">110</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size4">
+                    <label for="size4">140-146</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size5">
+                    <label for="size5">116</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size6">
+                    <label for="size6">146</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size7">
+                    <label for="size7">122</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size8">
+                    <label for="size8">152</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size9">
+                    <label for="size9">128</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size10">
+                    <label for="size10">158</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size11">
+                    <label for="size11">134</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size12">
+                    <label for="size12">164</label>
+                </div>
+            </div>
+            <button class="main_btn2">Показать</button>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__box">
+                        <nav class="header__top-nav">
+                            <ul>
+                                <li><a href="about-us.html">О нас</a></li>
+                                <li><a href="payments.html">Оплата и доставка</a></li>
+                                <li><a href="сooperation.html">Сотрудничество</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <a href="tel:+89161381068" class="header__call">+8 916 138 10 68</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <div class="header__items">
+                        <button class="header__burgir">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <button class="item open-search">
+                            <img src="img/search.png" alt="search">
+                        </button>
+                        <div class="search_block">
+                            <button class="search_close">
+                                <img src="img/modal-close.png" alt="">
+                            </button>
+                            <input type="text" placeholder="Поиск">
+                            <button class="btn">
+                                <img src="img/search.png" alt="search">
+                            </button>
+                        </div>
+                        <a href="dashboard-like.html" class="item item-like">
+                            <!-- <img src="img/like.png" alt="search"> -->
+                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1" xml:space="preserve"><desc/><path d="M28.343,17.48L16,29  L3.657,17.48C1.962,15.898,1,13.684,1,11.365v0C1,6.745,4.745,3,9.365,3h0.17c2.219,0,4.346,0.881,5.915,2.45L16,6l0.55-0.55  C18.119,3.881,20.246,3,22.465,3h0.17C27.255,3,31,6.745,31,11.365v0C31,13.684,30.038,15.898,28.343,17.48z" fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/></svg>
+                        </a>
+                        <button class="item open-auth">
+                            <img src="img/user.png" alt="search">
+                        </button>
+                        <a href="cart.html" class="item">
+                            <img src="img/shop.png" alt="search">
+                        </a>     
+                    </div>
+                    <nav class="header__navbar">
+                        <ul>
+                            <li><a href="#">Девочки</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Мальчики</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Женское</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Мужское</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Малышам</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Коллекции</a></li>
+                            <li><a href="magazine.html">Журнал</a></li>
+                            <li><a href="sale.html">Акции</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="dashboard">
+            <div class="container">
+                <div class="crumbs">
+                    <a href="#" class="link_back">Назад</a>
+                    <button class="open-aside"><span></span>Меню</button>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><p>Избранное</p></li>
+                    </ul>
+                </div>
+                <div class="dashboard__box">
+                    <div class="dashboard__aside">
+                        <button class="aside__close"><img src="img/modal-close.png" alt=""></button>
+                        <ul>
+                            <li><a href="dashboard-orders-2.html">МОИ ЗАКАЗЫ</a></li>
+                            <li><a href="dashboard-data.html">ЛИЧНЫЕ ДАННЫЕ</a></li>
+                            <li><a class="active" href="dashboard-like.html">ИЗБРАННОЕ</a></li>
+                            <li><a href="#">ПРЕДЗАКАЗЫ</a></li>
+                            <li><a href="#">Выйти</a></li>
+                        </ul>
+                    </div>
+                    <div class="dashboard__wrap">
+                        <div class="dashboard__empty">
+                            <div class="icon">
+                                <img src="img/like.png" alt="">
+                            </div>
+                            <h6>ИЗБРАННОЕ</h6>
+                            <p>Здесь будут отображаться модели которые вам понравились. </p>
+                            <a href="catalog.html" class="dashboard__btn">ПЕРЕЙТИ В КАТАЛОГ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__form">
+                <h2>связаться с нами</h2>
+                <p>Оставьте свои контактные данные и наш менеджер свяжется с вами:</p>
+                <form action="">
+                    <div class="form__input">
+                        <input type="text" placeholder="ФИО">
+                    </div>
+                    <div class="form__input">
+                        <input class="input_phone tel" type="text" placeholder="Телефон">
+                    </div>
+                    <button class="form__btn">Отправить</button>
+                </form>
+            </div>
+            <div class="footer__center">
+                <div class="footer__nav">
+                    <h6>Каталог</h6>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Девочки</a></li>
+                            <li><a href="#">Мальчики</a></li>
+                            <li><a href="#">Женщины</a></li>
+                            <li><a href="#">Мужчины</a></li>
+                            <li><a href="#">Малыши</a></li>
+                            <li><a href="#">Коллекции</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__nav">
+                    <h6>О нас</h6>
+                    <nav>
+                        <ul>
+                            <li><a href="about-us.html">О компании</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="magazine.html">Журнал</a></li>
+                            <li><a href="vacancies.html">Вакансии</a></li>
+                            <li><a href="сooperation.html">Сотрудничество</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="index.html" class="footer__logo">
+                    <img src="img/footer-logo.png" alt="">
+                </a>
+                <div class="footer__nav">
+                    <h6>Контакты</h6>
+                    <a href="tel:+89161381068" class="footer__phone">8-916-138-10-68</a>
+                    <a href="tomail:info@chilleasy.ru" class="footer__email">info@chilleasy.ru</a>
+                </div>
+                <div class="footer__nav">
+                    <h6>Мы в соцсетях:</h6>
+                    <div class="footer__soc">
+                        <a href="#">
+                            <img src="img/telegram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/vk.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>Используем cookies для корректной работы сайта, персонализации пользователей и других целей, предусмотренных <a href="#">политикой обработки персональных данных.</a></p>
+                <p class="copy">© Chilleasy. 2025. Все права защищены. <a href="#">Оферта.</a></p>
+            </div>
+        </div>
+    </footer>  
+    <script src="js/jquery.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title></title>
+</head>
+<body>
+    <!-- modal -->
+    <div class="modal">
+        <button class="modal__close"><img src="img/modal-close.png" alt=""></button>
+        <div class="modal__wrap reg">
+            <h2>Регистрация</h2>
+            <p>Привет! Давайте знакомиться. Заполните форму ниже и станьте участников ChillEasy Club:</p>
+            <form action="">
+                <div class="wrap">
+                    <div class="main_input">
+                        <input type="text" placeholder="ФИО">
+                    </div>
+                    <div class="main_input">
+                        <input class="input_phone tel" type="text" placeholder="Номер телефона">
+                    </div>
+                    <div class="main_input">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="main_input">
+                        <input type="text" placeholder="Город">
+                    </div>
+                    <div class="main_check">
+                        <input type="radio" id="face1" name="face">
+                        <label for="face1">физ.лицо</label>
+                    </div>
+                    <div class="main_check">
+                        <input type="radio" id="face2" name="face">
+                        <label for="face2">юр.лицо</label>
+                    </div>
+                    <div class="main_input">
+                        <input type="text" placeholder="Компания">
+                    </div>
+                </div>
+                <button class="main_btn">отправить</button>
+            </form>
+        </div>
+        <div class="modal__wrap auth">
+            <h2>Войти в личный кабинет</h2>
+            <div class="auth__tab">
+                <button class="btn active" id="authBtn1">по телефону</button>
+                <button class="btn" id="authBtn2">по email</button>
+            </div>
+            <div class="auth__wrap active" id="auth1">
+                <form action="">
+                    <div class="main_input">
+                        <input class="input_phone tel" type="text" placeholder="+7 ( _ _ _ ) _ _ _  _ _  _ _">
+                    </div>
+                    <div class="main_input">
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                    <button class="main_btn">войти</button>
+                </form>
+            </div>
+            <div class="auth__wrap" id="auth2">
+                <form action="">
+                    <div class="main_input">
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="main_input">
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                    <button class="main_btn">войти</button>
+                </form>
+            </div>
+            <div class="open-reg-wrap">
+                <button class="open-reg">Зарегистрироваться</button>
+            </div>
+            
+        </div>
+        <div class="modal__wrap filter">
+            <h2>Фильтр</h2>
+            <div class="filter__wrap filter__product">
+                <h6>Наличие товара</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="nameproduct">
+                    <label for="nameproduct">показывать товары в наличии на сайте</label>
+                </div>
+            </div>
+            <div class="filter__wrap filter__color">
+                <h6>Цвет</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="color1">
+                    <label for="color1">
+                        <span><img src="img/colors/1.png" alt=""></span>
+                        бежевый
+                    </label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color2">
+                    <label for="color2">
+                        <span><img src="img/colors/2.png" alt=""></span>
+                        красный</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color3">
+                    <label for="color3">
+                        <span><img src="img/colors/3.png" alt=""></span>
+                        бордовый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color4">
+                    <label for="color4">
+                        <span><img src="img/colors/4.png" alt=""></span>
+                        зеленый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color5">
+                    <label for="color5">
+                        <span><img src="img/colors/5.png" alt=""></span>
+                        белый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color6">
+                    <label for="color6">
+                        <span><img src="img/colors/6.png" alt=""></span>
+                        синый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color7">
+                    <label for="color7">
+                        <span><img src="img/colors/7.png" alt=""></span>
+                        голубой</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color8">
+                    <label for="color8">
+                        <span><img src="img/colors/8.png" alt=""></span>
+                        черный</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color9">
+                    <label for="color9">
+                        <span><img src="img/colors/9.png" alt=""></span>
+                        желтый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color10">
+                    <label for="color10">
+                        <span><img src="img/colors/10.png" alt=""></span>
+                        оранжевый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color11">
+                    <label for="color11">
+                        <span><img src="img/colors/11.png" alt=""></span>
+                        коричневый</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="color12">
+                    <label for="color12">
+                        <span><img src="img/colors/12.png" alt=""></span>
+                        серый</label>
+                </div>
+            </div>
+            <div class="filter__wrap filter__size">
+                <h6>Размер</h6>
+                <div class="filter__check">
+                    <input type="checkbox" id="size1">
+                    <label for="size1">104</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size2">
+                    <label for="size2">140</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size3">
+                    <label for="size3">110</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size4">
+                    <label for="size4">140-146</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size5">
+                    <label for="size5">116</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size6">
+                    <label for="size6">146</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size7">
+                    <label for="size7">122</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size8">
+                    <label for="size8">152</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size9">
+                    <label for="size9">128</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size10">
+                    <label for="size10">158</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size11">
+                    <label for="size11">134</label>
+                </div>
+                <div class="filter__check">
+                    <input type="checkbox" id="size12">
+                    <label for="size12">164</label>
+                </div>
+            </div>
+            <button class="main_btn2">Показать</button>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__box">
+                        <nav class="header__top-nav">
+                            <ul>
+                                <li><a href="about-us.html">О нас</a></li>
+                                <li><a href="payments.html">Оплата и доставка</a></li>
+                                <li><a href="сooperation.html">Сотрудничество</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <a href="tel:+89161381068" class="header__call">+8 916 138 10 68</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <div class="header__items">
+                        <button class="header__burgir">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <button class="item open-search">
+                            <img src="img/search.png" alt="search">
+                        </button>
+                        <div class="search_block">
+                            <button class="search_close">
+                                <img src="img/modal-close.png" alt="">
+                            </button>
+                            <input type="text" placeholder="Поиск">
+                            <button class="btn">
+                                <img src="img/search.png" alt="search">
+                            </button>
+                        </div>
+                        <a href="dashboard-like.html" class="item item-like">
+                            <!-- <img src="img/like.png" alt="search"> -->
+                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" id="Stock_cut" version="1.1" xml:space="preserve"><desc/><path d="M28.343,17.48L16,29  L3.657,17.48C1.962,15.898,1,13.684,1,11.365v0C1,6.745,4.745,3,9.365,3h0.17c2.219,0,4.346,0.881,5.915,2.45L16,6l0.55-0.55  C18.119,3.881,20.246,3,22.465,3h0.17C27.255,3,31,6.745,31,11.365v0C31,13.684,30.038,15.898,28.343,17.48z" fill="none" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/></svg>
+                        </a>
+                        <button class="item open-auth">
+                            <img src="img/user.png" alt="search">
+                        </button>
+                        <a href="cart.html" class="item">
+                            <img src="img/shop.png" alt="search">
+                        </a>     
+                    </div>
+                    <nav class="header__navbar">
+                        <ul>
+                            <li><a href="#">Девочки</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Мальчики</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Женское</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Мужское</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Малышам</a>
+                                <div class="menu-mobile-right"></div>
+                                <div class="catalog_menu">
+                                    <div class="catalog_menu-wrap">
+                                        <div class="container">
+                                            <div class="box">
+                                                <div class="wrap">
+                                                    <h6>Категории</h6>
+                                                    <ul>
+                                                        <li><a href="#">Футболки</a></li>
+                                                        <li><a href="#">Поло</a></li>
+                                                        <li><a href="#">Майки и топы</a></li>
+                                                        <li><a href="#">Шорты</a></li>
+                                                        <li><a href="#">Платье и сарафаны</a></li>
+                                                        <li><a href="#">Юбки</a></li>
+                                                        <li><a href="#">Лосины и бриджи</a></li>
+                                                        <li><a href="#">Комбинезоны</a></li>
+                                                        <li><a href="#">Рубашки и блузки</a></li>
+                                                        <li><a href="#">Пиджаки и жилеты</a></li>
+                                                        <li><a href="#">Джинсы</a></li>
+                                                        <li><a href="#">Брюки</a></li>
+                                                        <li><a href="#">Лонгсливы и водолазки</a></li>
+                                                        <li><a href="#">Толстовки, свитшоты, худи</a></li>
+                                                        <li><a href="#">Джемперы, свитеры, кардиганы</a></li>
+                                                        <li><a href="#">Верхняя одежда</a></li>
+                                                        <li><a href="#">Нижнее белье</a></li>
+                                                        <li><a href="#">Колготки и носки</a></li>
+                                                        <li><a href="#">Пижамы и халаты</a></li>
+                                                        <li><a href="#">Боди</a></li>
+                                                        <li><a href="#">Аксессуары</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="wrap">
+                                                    <h6>Коллекции</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                        <li><a href="#">Лето 2025</a></li>
+                                                        <li><a href="#">Нарядная коллекция</a></li>
+                                                        <li><a href="#">Спорт</a></li>
+                                                    </ul>
+                                                    <h6>Распродажа</h6>
+                                                    <ul>
+                                                        <li><a href="#">Школа</a></li>
+                                                        <li><a href="#">Детский сад</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="close"></div>
+                                </div>
+                            </li>
+                            <li><a href="#">Коллекции</a></li>
+                            <li><a href="magazine.html">Журнал</a></li>
+                            <li><a href="sale.html">Акции</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="policy">
+            <div class="container">
+                <div class="crumbs">
+                    <a href="#" class="link_back">Назад</a>
+                    <button class="open-aside"><span></span>Меню</button>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><p>Оферта CHILLEASY</p></li>
+                    </ul>
+                </div>
+                <h4>ОФЕРТА CHILLEASY</h4>
+                <div class="policy__wrap">
+                    <p>Общество с ограниченной ответственностью «ДС ГРУПП», именуемое в дальнейшем «Продавец», публикует настоящие Правила (условия) приобретения товаров дистанционным способом на сайте Интернет-магазина chilleasy, расположенного на доменном имени https://chilleasy.ru/.</p>
+                    <p>Настоящее предложение в соответствии с п. 2 ст. 437 Гражданского Кодекса Российской Федерации является публичной офертой (далее – Договор, Публичная оферта), полным и безоговорочным принятием (акцептом) условий которой в соответствии со ст. 438 Гражданского кодекса РФ, считается осуществление Покупателем конклюдентных действий – оформление Заказа на Товар, представленный на Сайте https://chilleasy.ru/ в порядке и на условиях, установленных в настоящем Договоре.</p>
+                    <p>Заказывая Товары через Интернет-магазин, Покупатель принимает условия Договора, в том числе касающиеся обработки Персональных данных Покупателя и (или) Получателя Заказа. В случае несогласия с каким-либо пунктом Договора, Покупателю предлагается отказаться от покупки Товара.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>1. ТЕРМИНЫ И ОПРЕДЕЛЕНИЯ</p>
+                    <p>1.1. Заказ — должным образом оформленный и размещенный запрос Покупателя (заполнены соответствующие поля на сайте в разделе «Корзина», «Оформление заказа» на приобретение одного или нескольких Товаров по указанному Покупателем адресу / посредством самовывоза Товаров, выбранных Покупателем на Сайте.)</p>
+                    <p>1.2. Покупатель — дееспособное физическое лицо, полностью принявшее условия настоящей Публичной оферты, т. е. акцептировавшее посредством размещения заказов и приобретения Товаров у ООО «ДС ГРУПП», которые представлены на сайте https://chilleasy.ru/, для своих личных, бытовых и других нужд, не связанных с осуществлением предпринимательской деятельности.</p>
+                    <p>1.3. Получатель Заказа — дееспособное физическое лицо, в пользу которого Покупатель оформляет Заказ на сайте https://chilleasy.ru/, для личных, бытовых и других нужд, не связанных с осуществлением предпринимательской деятельности.</p>
+                    <p>1.4. Продавец / Оператор - ООО «ДС ГРУПП» (ИНН 6679183549).</p>
+                    <p>1.5. Сайт – интернет-ресурс в сети интернет, расположенный по адресу https://chilleasy.ru/.</p>
+                    <p>1.6. Товар - одежда, аксессуары и иные товары, представленные к продаже на Сайте.</p>
+                    <p>1.7. Интернет-магазин - официальный интернет-магазин Продавца ООО «ДС ГРУПП», расположенный по интернет-адресу https://chilleasy.ru/, где представлены Товары, предлагаемые Продавцом для приобретения, а также условия оплаты и доставки Товаров Покупателям.</p>
+                    <p>1.8. Персональные данные — любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу — Потребителю (именуемый субъектом персональных данных), которую Потребитель добровольно и осознанно предоставляет самостоятельно при оформлении Заказа в Интернет-магазине, и необходимая для исполнения Интернет-магазином Заказа, а также информация, которая автоматически собирается в процессе использования Сайта — файлы cookie.</p>
+                    <p>1.9. Файлы cookie – Сайт использует файлы cookie и схожие технологии, чтобы гарантировать максимальное удобство Покупателям, предоставляя персонализированную информацию, запоминая предпочтения в области маркетинга и контента Сайта, а также помогая получить нужную Покупателю информацию.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>2. ОБЩИЕ ПОЛОЖЕНИЯ</p>
+                    <p>2.1. Данная Публичная оферта распространяется на все виды Товаров и услуг, представленных на Сайте, пока такие предложения с описанием присутствуют в каталоге Интернет-магазина.</p>
+                    <p>2.2. Настоящая Публичная оферта признается акцептованной Покупателем с момента оформления Покупателем Заказа, а также с момента принятия от Покупателя Заказа через страницу Сайта «Форма заказа», которая открывается в случае перехода на страницу «Оформить заказ» в разделе «Корзина».</p>
+                    <p>2.3. Договор, заключаемый на основании акцептирования Покупателем настоящей оферты, является договором присоединения, к которому Покупатель присоединяется без каких-либо исключений и/или оговорок.</p>
+                    <p>2.4. Покупатель может оформить заказ в Интернет-магазине по адресу https://chilleasy.ru/, 24 часа в сутки, 7 дней в неделю, кроме периодов проведения регламентных работ или технических сбоев.</p>
+                    <p>2.5. Условия осуществления возврата доступны на сайте https://chilleasy.ru/ в разделах «Возврат».</p>
+                    <p>2.6. Отношения между Покупателем и Продавцом регулируются Гражданским кодексом Российской Федерации о розничной купле-продаже (§ 2 глава 30), Законом «О защите прав потребителей», Постановлением Правительства РФ «Об утверждении Правил продажи товаров дистанционным способом» и принимаемыми в соответствии с ним иными федеральными законами и правовыми актами Российской Федерации.</p>
+                    <p>2.7. Продавец оставляет за собой право вносить изменения и/или дополнения в условия настоящего Договора путем размещения таких изменений и/или дополнений в тексте самого Договора при дальнейшем размещении на Сайте, в связи, с чем Покупатель обязуется регулярно отслеживать изменения/дополнения условий настоящего Договора, размещенного на сайте в разделе «Новости». Новая редакция Договора вступает в силу после его публикации на Сайте и применяется к любому Заказу, сделанному после публикации, если иное не предусмотрено условиями настоящего Договора.</p>
+                    <p>2.8. Вся текстовая информация и графические изображения товаров, размещаемых на Сайте, являются собственностью Продавца или его контрагентов. Просмотр информации или распечатка страниц Сайта разрешается только для личного использования.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>3. ПРЕДМЕТ</p>
+                    <p>3.1. Продавец обязуется продать Товары, представленные в каталоге Интернет-магазина по адресу https://chilleasy.ru/, а Покупатель обязуется принять и оплатить Товар по ценам, указанным в описании Товара на соответствующей странице Сайта, на условиях настоящего Договора.</p>
+                    <p>3.2. Факт оформления заказа Покупателем является безоговорочным фактом принятия Покупателем условий данного Договора, в том числе касающихся обработки его Персональных данных.</p>
+                    <p>3.3. Договор розничной купли-продажи считается заключенным с момента выдачи Продавцом, Покупателю товарного чека либо иного документа, подтверждающего оплату товара.</p>
+                    <p>3.4. Осуществляя Заказ, Покупатель соглашается с тем, что Продавец может поручить исполнение Договора третьему лицу, при этом оставаясь ответственным за его исполнение.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>4. ОФОРМЛЕНИЕ И СРОКИ ВЫПОЛНЕНИЯ ЗАКАЗА</p>
+                    <p>4.1. Заказ оформляется Покупателем самостоятельно на Сайте. При невозможности самостоятельного заказа на Сайте, а также вопросов, связанных с заказом, можно обратиться по адресу электронной почты - info@chilleasy.ru,</p>
+                    <p>4.2. Общение Покупателя с менеджерами и иными представителями Продавца должно строиться на принципах общепринятой морали и коммуникационного этикета. Строго запрещено использование нецензурных слов, брани, оскорбительных выражений, а также угроз и шантажа, в независимости от того, в каком виде и кому они были адресованы.</p>
+                    <p>4.3. Регистрация на Сайте является обязательной для оформления Заказа.</p>
+                    <p>4.4. При оформлении Заказа Покупатель должен указать следующую информацию:</p>
+                    <ul>
+                        <li>сведения об имени (фамилия, имя, отчество) Покупателя или Получателя Заказа (в случае, если Получателем Заказа является лицо отличное от Покупателя);</li>
+                        <li>сведения о способах связи (адрес электронной почты и контактный номер телефона);</li>
+                        <li>населенный пункт;</li>
+                        <li>по требованию Продавца иную информацию, необходимую для исполнения обязательств Продавца перед Покупателем по настоящему Договору;</li>
+                        <li>наименование юридичесого лица.</li>
+                    </ul>
+                    <p>4.5. Продавец не несет ответственности за содержание и достоверность информации, предоставленной Покупателем при оформлении Заказа.</p>
+                    <p>4.6. Покупатель несет полную ответственность за предоставление неверных сведений, повлекшее за собой невозможность надлежащего исполнения Продавцом своих обязательств перед Покупателем / Получателем Заказа.</p>
+                    <p>4.7. В случае отсутствия заказанных Покупателем Товаров на складе Продавца, последний вправе исключить указанный Товар из Заказа / аннулировать Заказ Покупателя, уведомив об этом Потребителя путем направления соответствующего электронного сообщения по адресу, указанному Покупателем при оформлении Заказа.</p>
+                    <p>4.8. Сопровождающие Товар фотографии являются простыми иллюстрациями к нему и могут отличаться от фактического внешнего вида Товара. Сопровождающие Товар описания / характеристики не претендуют на исчерпывающую информативность и могут содержать опечатки. Для уточнения информации по Товару Покупатель должен обратиться к Продавцу через систему обратной связи, указанную в разделе «Контакты».</p>
+                    <p>4.9. В случае аннуляции полностью предоплаченного Заказа стоимость аннулированного Товара возвращается Продавцом Покупателю способом, согласованным между сторонами.</p>
+                    <p>4.10. После оформления Заказа на Сайте Потребителю предоставляется информация о предполагаемых сроках доставки путем направления электронного сообщения по адресу, указанному Покупателем при оформлении Заказа.</p>
+                    <p>.11. Дата передачи Товара может быть изменена Продавцом в одностороннем порядке в случае наличия объективных, по мнению Продавца, причин.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>5. ДОСТАВКА ЗАКАЗА</p>
+                    <p>5.1. Способы, а также примерные сроки доставки Товаров, реализуемых Продавцом, указаны на Сайте в разделе «Доставка» по адресу https://chilleasy.ru/. Конкретные сроки доставки могут быть согласованы Покупателем при подтверждении Заказа.</p>
+                    <p>5.2. Доставка товара в отдельные страны может быть ограничена законодательством страны доставки и/или положениями отдельных стран и/или международными отношениями. В случае ограничения доставки товара, товар должен быть возвращен продавцу доступным способом, деньги, уплаченные за товар, возвращаются в течение 10 дней способом, которым деньги были уплачены за товар.</p>
+                    <p>5.3. Продавец старается максимально соблюдать согласованные сроки доставки. Продавец не несет ответственность за возможные задержки в доставке ввиду непредвиденных обстоятельств, произошедших не по вине Продавца.</p>
+                    <p>5.4. При доставке Заказ вручается Покупателю либо Получателю Заказа, указанному в Заказе. При невозможности получения Заказа указанными выше лицами, Заказ может быть вручен лицу, который может предоставить сведения о Заказе (номер отправления и/или ФИО Потребителя).</p>
+                    <p>5.5. Стоимость доставки Заказа рассчитывается индивидуально, исходя из региона и способа доставки и указывается на завершающем этапе оформления Заказа на Сайте.</p>
+                    <p>5.6. Покупатель понимает и соглашается с тем, что: осуществление доставки — отдельная услуга, не являющаяся неотъемлемой частью приобретаемого Покупателем Товара. Претензии к качеству приобретенного Товара, возникшие после получения и оплаты Товара, рассматриваются в соответствии с Законом РФ «О защите прав потребителей» и гарантийными обязательствами соответствующего Продавца. Покупатель имеет право на возврат денег за Товар как таковой, в соответствии с Законом Российской Федерации от 07.02.1992 N 2300-1 «О защите прав потребителей».</p>
+                    <p>5.7. Обязанность Продавца передать товар Покупателю считается исполненной в момент вручения Товара Потребителю.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>6. ОПЛАТА ТОВАРА</p>
+                    <p>6.1. Цена товара, реализуемого в Интернет-магазине, указывается в рублях Российской Федерации. Оплата производится на счета, указанные Продавцом.</p>
+                    <p>6.2. Цены на Товар определяются Продавцом в одностороннем бесспорном порядке и указываются на страницах Интернет-магазина по адресу https://chilleasy.ru/. В случае неверного указания цены заказанного Покупателем Товара, Продавец информирует об этом Покупателя для подтверждения Заказа по исправленной цене либо аннулирования Заказа. При невозможности связаться с Покупателем данный Заказ считается аннулированным, за исключением случаев, когда цена на Товар была снижена и/или оказалась меньшей, чем указано на страницах Интернет-магазина. Если Заказ был оплачен, Продавец возвращает Покупателю оплаченную за Заказ сумму тем же способом, которым она была уплачена.</p>
+                    <p>6.3. Цена Товара на Сайте может быть изменена Продавцом в одностороннем порядке. При этом цена на заказанный Покупателем Товар изменению не подлежит. Предложение о заключении договора на конкретный товар действует в течение срока нахождения товара на интернет-сайте Продавца при условии наличия данного товара на складе Продавца.</p>
+                    <p>6.4. Произвести оплату Покупатель может следующим способом:</p>
+                    <ul>
+                        <li>оплата на расчетный счет Продавца.</li>
+                    </ul>
+                    <p>6.5. Продавец вправе предоставлять скидки на Товары и устанавливать программу бонусов. Виды скидок, бонусов, порядок и условия начисления определяются Продавцом самостоятельно и указаны на Сайте.</p>
+                    <p>6.6. В случае если при применении скидки / бонуса пересчитанная стоимость Товара Продавца включает в себя копейки, такая стоимость Товара подлежит округлению в сторону уменьшения до значения, кратного 1 (Одному) рублю.</p>
+                    <p>6.7. При проведении маркетинговых мероприятий, предполагающих вложение каких-либо объектов в отправления с Заказом Покупателя, доставка указанных вложений осуществляется за счет Покупателя. Для того, чтобы отказаться от вложения, Покупателю необходимо обратиться к Продавцу через раздел «Контакты».</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>7. ОТВЕТСТВЕННОСТЬ</p>
+                    <p>7.1. Продавец не несет ответственности за ущерб, причиненный Потребителю вследствие ненадлежащего использования Товаров, приобретенных в Интернет-магазине.</p>
+                    <p>7.2. Продавец не несет ответственности за точность и правильность информации, предоставляемой Покупателем при оформлении Заказа.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>8. ПЕРСОНАЛЬНЫЕ ДАННЫЕ</p>
+                    <p>8.1. Для целей настоящей Публичной оферты под персональными данными понимается любая информация, относящаяся к прямо или косвенно определенному, или определяемому физическому лицу (субъекту персональных данных) — Потребителю.</p>
+                    <p>8.2. Под обработкой персональных данных понимается любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными Потребителя, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение) извлечение, использование, передачу (в том числе передачу третьим лицам, не исключая трансграничную передачу, если необходимость в ней возникла в ходе исполнения обязательств), блокирование, удаление, уничтожение персональных данных.</p>
+                    <p>8.3. Факт принятия Покупателем условий настоящего Договора является основанием обработки Продавцом, а также уполномоченными им лицами персональных данных как самого Покупателя, так и Получателя Заказа (вместе именуемые «Потребитель»), которые необходимы для:</p>
+                    <ul>
+                        <li>заключения Договора, по которому Потребитель является стороной или выгодоприобретателем, и дальнейшее исполнение обязательств по заключенному Договору, включая информирование по статусу Заказа;</li>
+                        <li>осуществления и выполнения функций, полномочий и обязанностей Продавцом, которые предусмотрены законодательством Российской Федерации, включая, но не ограничиваясь: налоговое, гражданское, в том числе законодательство в области защиты прав потребителей;</li>
+                        <li>коммуникации, в том числе прием и обработка запросов и обращений Потребителей, и контроль качества информационного взаимодействия с ними;</li>
+                        <li>исследования степени удовлетворенности Потребителя качеством Товара и услуг Продавца; аналитики действий Потребителя на Сайте (в том числе определение локации) и функционирования Сайта;</li>
+                        <li>хранения персональных данных Потребителя и их носителей в соответствии с локальными нормативными актами.</li>
+                    </ul>
+                    <p>8.4. В целях, указанных в п. 9.3 настоящего Договора, Продавец вправе осуществлять с персональными данными Потребителя:</p>
+                    <p>1.	8.4.1 обработку персональных данных с использованием средств автоматизации, в том числе в информационно-телекоммуникационных сетях, или без использования таких средств, в соответствии с целями обработки;</p>
+                    <p>2.	8.4.2. передачу (предоставление, доступ, трансграничную передачу) персональных данных третьим лицам, которым могут быть раскрыты персональные данные Потребителя, для выполнения и (или) оказания технических и организационных услуг в рамках исполнения обязательств Продавца по Договору.</p>
+                    <p>8.5. Оператор, а также третьи лица, действующие по его поручению, обязуются соблюдать следующие правила и предоставляют Потребителю следующие гарантии в отношении обработки его персональных данных:</p>
+                    <ul>
+                        <li>обеспечить обработку персональных данных с соблюдением всех применимых требований законодательства Российской Федерации в области защиты персональных данных, в том числе с соблюдением принципов, требований, обязательств персональных данных, установленных 152-ФЗ;</li>
+                        <li>в случае, если в целях исполнения своих обязательств перед Потребителем должен передать или иным образом раскрыть его персональные данные третьим лицам, в том числе органам государственной власти, осуществлять указанные действия с соблюдением требований законодательства;</li>
+                        <li>нести ответственность за охрану и обеспечение безопасности и конфиденциальности персональных данных Потребителей при их обработке в соответствии с требованиями законодательства Российской Федерации.
+8.6. Лица, обрабатывающие персональные данные Потребителя, не несут ответственность за неправомерную обработку персональных данных перед Потребителем. Ответственность за такую обработку указанные лица.</li>
+                    </ul>
+                    <p>8.7. Продавец имеет право отправлять информацию (сообщения) рекламного характера на электронную почту и (или) мобильный телефон Покупателя только при наличии явно выраженного согласия посредством проставления галочки «согласен» на Сайте.</p>
+                    <p>8.8. Покупатель может отказаться от получения рекламной информации без объяснения причин в любое время одним из указанных способов:</p>
+                    <ul>
+                        <li>нажав кнопку «Отписаться» в электронном письме на почтовый ящик;</li>
+                        <li>обратиться в Службу по работе с клиентами Продавца по телефону, указанному на сайте на сайте https://chilleasy.ru/ в разделе «Контакты».</li>
+                    </ul>
+                    <p>8.9. В случае обращения Потребителя по телефону, Оператор вправе записывать телефонные разговоры для осуществления контроля качества информационного взаимодействия сотрудников Оператора с Потребителем, включая контроль качества исполнения Заказов.</p>
+                    <p>8.10. Обработка Персональных данных будет осуществляться в течение действия настоящего Договора и 5 (Пяти) лет после его прекращения.</p>
+                    <p>8.11. Все персональные данные Потребителя будут храниться в соответствии с условиями действующего законодательства РФ.</p>
+                    <p>8.12. По достижении целей обработки или в случае утраты необходимости в достижении этих целей, обрабатываемые персональные данные Потребителей подлежат уничтожению, если иное не предусмотрено законом. Продавец обязуется принимать все возможные меры для обеспечения уничтожения персональных данных Потребителя, в том числе третьими лицами, действующими по поручению Оператора.</p>
+                    <p>8.13. Покупатель или Получатель заказа вправе требовать от Оператора уточнения его персональных данных, их блокирования или уничтожения в случае, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели обработки, а также принимать предусмотренные законом меры по защите своих прав.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>9. СРОК ДЕЙСТВИЯ ПУБЛИЧНОЙ ОФЕРТЫ</p>
+                    <p>9.1. Настоящая Публичная оферта вступает в силу с момента ее акцепта Покупателем и действует до момента отзыва акцепта Публичной оферты.</p>
+                </div>
+                <div class="policy__wrap">
+                    <p>10. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</p>
+                    <p>10.1. Продавец вправе переуступать либо каким-либо иным способом передавать свои права и обязанности, вытекающие из его отношений с Покупателем, третьим лицам.</p>
+                    <p>10.2. Интернет-магазин и предоставляемые сервисы могут быть временно, частично или полностью недоступны по причине проведения профилактических или иных работ или по любым другим причинам технического характера.</p>
+                    <p>10.3. В случае возникновения вопросов и претензий со стороны Потребителя, он может обратиться к Продавцу по телефону или иным доступным способом. Все возникающее споры стороны будут стараться решить путем переговоров, при недостижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии с действующим законодательством Российской Федерации.</p>
+                    <p>10.4. Признание судом недействительности какого-либо положения настоящей Публичной оферты не влечет за собой недействительность остальных положений.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__form">
+                <h2>связаться с нами</h2>
+                <p>Оставьте свои контактные данные и наш менеджер свяжется с вами:</p>
+                <form action="">
+                    <div class="form__input">
+                        <input type="text" placeholder="ФИО">
+                    </div>
+                    <div class="form__input">
+                        <input class="input_phone tel" type="text" placeholder="Телефон">
+                    </div>
+                    <button class="form__btn">Отправить</button>
+                </form>
+            </div>
+            <div class="footer__center">
+                <div class="footer__nav">
+                    <h6>Каталог</h6>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Девочки</a></li>
+                            <li><a href="#">Мальчики</a></li>
+                            <li><a href="#">Женщины</a></li>
+                            <li><a href="#">Мужчины</a></li>
+                            <li><a href="#">Малыши</a></li>
+                            <li><a href="#">Коллекции</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__nav">
+                    <h6>О нас</h6>
+                    <nav>
+                        <ul>
+                            <li><a href="about-us.html">О компании</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a href="magazine.html">Журнал</a></li>
+                            <li><a href="vacancies.html">Вакансии</a></li>
+                            <li><a href="сooperation.html">Сотрудничество</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="index.html" class="footer__logo">
+                    <img src="img/footer-logo.png" alt="">
+                </a>
+                <div class="footer__nav">
+                    <h6>Контакты</h6>
+                    <a href="tel:+89161381068" class="footer__phone">8-916-138-10-68</a>
+                    <a href="tomail:info@chilleasy.ru" class="footer__email">info@chilleasy.ru</a>
+                </div>
+                <div class="footer__nav">
+                    <h6>Мы в соцсетях:</h6>
+                    <div class="footer__soc">
+                        <a href="#">
+                            <img src="img/telegram.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/vk.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>Используем cookies для корректной работы сайта, персонализации пользователей и других целей, предусмотренных <a href="#">политикой обработки персональных данных.</a></p>
+                <p class="copy">© Chilleasy. 2025. Все права защищены. <a href="#">Оферта.</a></p>
+            </div>
+        </div>
+    </footer>  
+    <script src="js/jquery.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
